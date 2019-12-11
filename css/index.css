@@ -140,10 +140,45 @@ body {
   padding: 0;
   margin: 0;
   max-width: 100%;
-  border: 1px solid grey;
 }
 html {
   font-size: 62.5%;
 }
 /* Variables */
 /* Mix-ins */
+.text-decoration {
+  text-decoration: none;
+  color: black;
+}
+/* Header of Page */
+header nav {
+  margin: 4% 0 2% 50%;
+}
+header nav a {
+  width: 40%;
+  margin: 4%;
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+}
+.top-section-banner {
+  display: flex;
+  justify-content: space-between;
+  background: #deddde;
+  padding: 5%;
+}
+.top-section-banner .img-of-me {
+  width: 40%;
+}
+.top-section-banner .img-of-me img {
+  border-radius: 50%;
+}
+.top-section-banner .banner-full-text {
+  font-size: 2rem;
+}
+.top-section-banner .banner-full-text h1 {
+  font-size: 4rem;
+}
+.top-section-banner .banner-full-text h2 {
+  font-size: 2.5rem;
+}

@@ -144,7 +144,6 @@ body {
   padding: 0;
   margin: 0;
   max-width: 100%;
-  border: 1px solid grey;
 }
 
 html {
@@ -152,4 +151,45 @@ html {
 }
 
 /* Variables */
+
 /* Mix-ins */
+.text-decoration {
+  text-decoration: none;
+  color: black;
+}
+
+/* Header of Page */
+
+header {
+  nav {
+    margin: 4% 0 2% 50%;
+    a {
+      width: 40%;
+      margin: 4%;
+      font-size: 2rem;
+      .text-decoration();
+    } //end of anchor
+  } //end of nav
+} //header
+
+.top-section-banner {
+  display: flex;
+  justify-content: space-between;
+  background: #deddde;
+  padding: 5%;
+  .img-of-me {
+    width: 40%;
+    img {
+      border-radius: 50%;
+    } //img closes
+  } //img-of-me closes
+  .banner-full-text {
+    font-size: 2rem;
+    h1 {
+      font-size: 4rem;
+    } //h1 closes
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+} //top-section-banner closes

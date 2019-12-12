@@ -151,7 +151,7 @@ html {
 }
 
 /* Variables */
-@purp: #0b28c1;
+@purp: #ae516e;
 
 /* Mix-ins */
 .text-decoration {
@@ -163,11 +163,27 @@ html {
   margin-bottom: 20%;
 }
 
+.border-margin-for-bottom {
+  padding: 3% 1% 3% 1%;
+  h2 {
+    text-decoration: underline;
+    margin-bottom: 2%;
+  }
+}
 /* Header of Page */
 
 header {
   nav {
     margin: 2% 0 2% 50%;
+
+    @media (max-width: 500px) {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto;
+      margin-left: 35%;
+    }
     a {
       width: 40%;
       margin: 4%;
@@ -186,6 +202,9 @@ header {
   padding: 3%;
   .img-of-me {
     width: 30%;
+    @media (max-width: 500px) {
+      display: none;
+    }
     img {
       border-radius: 50%;
       border: 10px solid @purp;
@@ -206,6 +225,11 @@ header {
       display: flex;
       justify-content: space-around;
       margin-top: 2%;
+
+      @media (max-width: 500px) {
+        display: flex;
+        flex-flow: column nowrap;
+      }
     } // contact info in banner
   } //banner full text closes
 } //top-section-banner closes
@@ -220,10 +244,16 @@ header {
 address,
 .email {
   .margin-bottom();
+  @media (max-width: 500px) {
+    margin: 10%;
+  }
 }
 
 .email {
   margin-bottom: 35%;
+  @media (max-width: 500px) {
+    margin: 10%;
+  }
 }
 
 .email-and-handle-to-git p,
@@ -235,11 +265,35 @@ address,
 .bottom-big-section {
   display: flex;
   justify-content: space-evenly;
-  border: 1px solid black;
   font-size: 2.3rem;
 
+  @media (max-width: 500px) {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 5% 2%;
+  }
+
+  .whole-right-column {
+    background: @purp;
+    @media (max-width: 500px) {
+      background: none;
+    }
+  }
+
   .about-me {
-    border: 1px solid black;
-    margin: 3% 1% 3% 1%;
+    .border-margin-for-bottom();
+  }
+  .interest {
+    .border-margin-for-bottom();
+  }
+  .career-objective {
+    .border-margin-for-bottom();
+  }
+  .education {
+    .border-margin-for-bottom();
+  }
+  .experience-work-history {
+    .border-margin-for-bottom();
+    width: 100%;
   }
 }

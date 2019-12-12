@@ -162,7 +162,7 @@ html {
 
 header {
   nav {
-    margin: 4% 0 2% 50%;
+    margin: 2% 0 2% 50%;
     a {
       width: 40%;
       margin: 4%;
@@ -174,22 +174,31 @@ header {
 
 .top-section-banner {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  //justify-content: space-between;  ------closed this temporary
   background: #deddde;
-  padding: 5%;
+  padding: 3%;
   .img-of-me {
     width: 40%;
+    border: 1px solid black;
     img {
       border-radius: 50%;
     } //img closes
   } //img-of-me closes
   .banner-full-text {
+    border: 1px solid black;
     font-size: 2rem;
+    width: 
     h1 {
-      font-size: 4rem;
+      font-size: 7rem;
     } //h1 closes
     h2 {
-      font-size: 2.5rem;
-    }
-  }
+      font-size: 3.5rem;
+    } //h2 closes
+
+    .contact-info-in-banner {
+      border: 1px solid black;
+      display: flex;
+    } // contact info in banner
+  } //banner full text closes
 } //top-section-banner closes

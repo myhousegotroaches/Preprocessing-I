@@ -152,7 +152,7 @@ html {
 }
 /* Header of Page */
 header nav {
-  margin: 4% 0 2% 50%;
+  margin: 2% 0 2% 50%;
 }
 header nav a {
   width: 40%;
@@ -163,22 +163,28 @@ header nav a {
 }
 .top-section-banner {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background: #deddde;
-  padding: 5%;
+  padding: 3%;
 }
 .top-section-banner .img-of-me {
   width: 40%;
+  border: 1px solid black;
 }
 .top-section-banner .img-of-me img {
   border-radius: 50%;
 }
 .top-section-banner .banner-full-text {
+  border: 1px solid black;
   font-size: 2rem;
 }
 .top-section-banner .banner-full-text h1 {
-  font-size: 4rem;
+  font-size: 7rem;
 }
 .top-section-banner .banner-full-text h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+}
+.top-section-banner .banner-full-text .contact-info-in-banner {
+  border: 1px solid black;
+  display: flex;
 }

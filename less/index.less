@@ -4,56 +4,296 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
+}
+/* My Code Starts Here */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+/* Variables */
+@purp: #ae516e;
+
+/* Mix-ins */
+.text-decoration {
+  text-decoration: none;
+  color: black;
+}
+
+.margin-bottom {
+  margin-bottom: 20%;
+}
+
+.border-margin-for-bottom {
+  padding: 3% 1% 3% 1%;
+  h2 {
+    text-decoration: underline;
+    margin-bottom: 2%;
+  }
+}
+/* Header of Page */
+
+header {
+  nav {
+    margin: 2% 0 2% 50%;
+
+    @media (max-width: 500px) {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto;
+      margin-left: 35%;
+    }
+    a {
+      width: 40%;
+      margin: 4%;
+      font-size: 2rem;
+      .text-decoration();
+    } //end of anchor
+  } //end of nav
+} //header
+
+.top-section-banner {
+  display: flex;
+  justify-content: space-evenly;
+  //justify-content: space-between;  ------closed this temporary
+  background: #deddde;
+  max-width: 100%;
+  padding: 3%;
+  .img-of-me {
+    width: 30%;
+    @media (max-width: 500px) {
+      display: none;
+    }
+    img {
+      border-radius: 50%;
+      border: 10px solid @purp;
+    } //img closes
+  } //img-of-me closes
+  .banner-full-text {
+    font-size: 2rem;
+    width: 50%;
+    text-align: center;
+    h1 {
+      font-size: 6rem;
+    } //h1 closes
+    h2 {
+      font-size: 3.5rem;
+    } //h2 closes
+
+    .contact-info-in-banner {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 2%;
+
+      @media (max-width: 500px) {
+        display: flex;
+        flex-flow: column nowrap;
+      }
+    } // contact info in banner
+  } //banner full text closes
+} //top-section-banner closes
+
+.addy-and-phone,
+.email-and-handle-to-git {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+address,
+.email {
+  .margin-bottom();
+  @media (max-width: 500px) {
+    margin: 10%;
+  }
+}
+
+.email {
+  margin-bottom: 35%;
+  @media (max-width: 500px) {
+    margin: 10%;
+  }
+}
+
+.email-and-handle-to-git p,
+address,
+.addy-and-phone p {
+  font-size: 2.5rem;
+}
+
+.bottom-big-section {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2.3rem;
+
+  @media (max-width: 500px) {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 5% 2%;
+  }
+
+  .whole-right-column {
+    background: @purp;
+    @media (max-width: 500px) {
+      background: none;
+    }
+  }
+
+  .about-me {
+    .border-margin-for-bottom();
+  }
+  .interest {
+    .border-margin-for-bottom();
+  }
+  .career-objective {
+    .border-margin-for-bottom();
+  }
+  .education {
+    .border-margin-for-bottom();
+  }
+  .experience-work-history {
+    .border-margin-for-bottom();
+    width: 100%;
+  }
+}

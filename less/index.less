@@ -151,11 +151,16 @@ html {
 }
 
 /* Variables */
+@purp: #0b28c1;
 
 /* Mix-ins */
 .text-decoration {
   text-decoration: none;
   color: black;
+}
+
+.margin-bottom {
+  margin-bottom: 20%;
 }
 
 /* Header of Page */
@@ -177,28 +182,64 @@ header {
   justify-content: space-evenly;
   //justify-content: space-between;  ------closed this temporary
   background: #deddde;
+  max-width: 100%;
   padding: 3%;
   .img-of-me {
-    width: 40%;
-    border: 1px solid black;
+    width: 30%;
     img {
       border-radius: 50%;
+      border: 10px solid @purp;
     } //img closes
   } //img-of-me closes
   .banner-full-text {
-    border: 1px solid black;
     font-size: 2rem;
-    width: 
+    width: 50%;
+    text-align: center;
     h1 {
-      font-size: 7rem;
+      font-size: 6rem;
     } //h1 closes
     h2 {
       font-size: 3.5rem;
     } //h2 closes
 
     .contact-info-in-banner {
-      border: 1px solid black;
       display: flex;
+      justify-content: space-around;
+      margin-top: 2%;
     } // contact info in banner
   } //banner full text closes
 } //top-section-banner closes
+
+.addy-and-phone,
+.email-and-handle-to-git {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+address,
+.email {
+  .margin-bottom();
+}
+
+.email {
+  margin-bottom: 35%;
+}
+
+.email-and-handle-to-git p,
+address,
+.addy-and-phone p {
+  font-size: 2.5rem;
+}
+
+.bottom-big-section {
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  font-size: 2.3rem;
+
+  .about-me {
+    border: 1px solid black;
+    margin: 3% 1% 3% 1%;
+  }
+}
